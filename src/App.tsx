@@ -1,8 +1,8 @@
 import { useState, useRef,type FormEvent, type ChangeEvent } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-//import { preconnect } from 'react-dom';
+import { preconnect } from 'react-dom';
 
 export type Todo ={
   id: number;
@@ -95,6 +95,7 @@ function TodoInsert({onAdd}: { onAdd: (text: string) => void}){
   );
 }
 
+
 function TodoList({todos, onToggle, onRemove,}: { todos: Todo[];
    onToggle: (id: number) => void;
    onRemove: (id: number) => void;
@@ -119,6 +120,7 @@ function TodoList({todos, onToggle, onRemove,}: { todos: Todo[];
     </ul>
   );
 }
+
 
 function TodoItem({ todo, onToggle, onRemove,}: 
   { todo: Todo
